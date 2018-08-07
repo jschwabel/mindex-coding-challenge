@@ -12,12 +12,12 @@ public class ReportingStructureController {
     private static final Logger LOG = LoggerFactory.getLogger(ReportingStructureController.class);
 
     @Autowired
-    private ReportingStructureService rsService;
+    private ReportingStructureService reportingStructureService;
 
     @GetMapping("/reporting-structure/{id}")
     public ReportingStructure calculate(@PathVariable String id) {
-        LOG.debug("reporting-structure calulate for id [{}]", id);
+        LOG.debug("reporting-structure calculate for id [{}]", id);
 
-        return rsService.calculate(id);
+        return reportingStructureService.calculate(id);
     }
 }
