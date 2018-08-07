@@ -1,0 +1,32 @@
+[
+  {
+    "compensationId" : "16a596ae-edd3-4847-99fe-c4518e82c86f",
+    "employeeId" : "16a596ae-edd3-4847-99fe-c4518e82c86f",
+    "salary" : "100",
+    "effectiveDate" : "2017-12-05"
+  },
+  {
+    "compensationId" : "b7839309-3348-463b-a7e3-5de1c168beb3",
+    "employeeId" : "b7839309-3348-463b-a7e3-5de1c168beb3",
+    "salary" : "75",
+    "effectiveDate" : "2018-01-01"
+  },
+  {
+    "compensationId" : "03aa1462-ffa9-4978-901b-7c001562cf6f",
+    "employeeId" : "03aa1462-ffa9-4978-901b-7c001562cf6f",
+    "salary" : "50",
+    "effectiveDate" : "2018-03-02"
+  },
+  {
+    "compensationId" : "62c1084e-6e34-4630-93fd-9153afb65309",
+    "employeeId" : "62c1084e-6e34-4630-93fd-9153afb65309",
+    "salary" : "25",
+    "effectiveDate" : "2018-05-15"
+  },
+  {
+    "compensationId" : "c0c2293d-16bd-4603-8e08-638a9d18b22c",
+    "employeeId" : "c0c2293d-16bd-4603-8e08-638a9d18b22c",
+    "salary" : "15",
+    "effectiveDate" : "2018-07-24"
+  }
+]
