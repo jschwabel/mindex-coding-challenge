@@ -8,4 +8,5 @@ These should persist and query the Compensation from the persistence layer.
 public interface CompensationService {
     Compensation create(Compensation c);
     Compensation read(String id);
+    Compensation readByEmployeeId(String id);
 }

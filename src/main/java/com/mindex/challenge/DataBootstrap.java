@@ -44,7 +44,6 @@ public class DataBootstrap {
         for (Employee employee : employees) {
             LOG.debug("e.id["+employee.getEmployeeId()+"]");
             employeeRepository.insert(employee);
-            
         }
         
         InputStream inputStream2 = this.getClass().getResourceAsStream(DATASTORE2_LOCATION);
@@ -59,8 +58,7 @@ public class DataBootstrap {
 
         for (Compensation compensation : compensations) {
             LOG.debug("c.id["+compensation.getCompensationId()+"]");
-            compensationRepository.insert(compensation);
-            
+            compensationRepository.insert(compensation);    
         }
     }
 }

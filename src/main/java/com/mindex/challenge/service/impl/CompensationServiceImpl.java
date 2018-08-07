@@ -2,7 +2,9 @@ package com.mindex.challenge.service.impl;
 
 import com.mindex.challenge.dao.CompensationRepository;
 import com.mindex.challenge.data.Compensation;
+import com.mindex.challenge.data.Employee;
 import com.mindex.challenge.service.CompensationService;
+import com.mindex.challenge.service.EmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,9 @@ public class CompensationServiceImpl implements CompensationService {
 
     @Autowired
     private CompensationRepository compensationRepository;
+    
+    @Autowired
+    private EmployeeService employeeService;
 
     @Override
     public Compensation create(Compensation compensation) {
@@ -37,6 +42,37 @@ public class CompensationServiceImpl implements CompensationService {
             throw new RuntimeException("Invalid compensationId: " + id);
         }
 
+        return compensation;
+    }
+    
+//    @Override
+//    public Compensation readByEmployeeId(String id) {
+//        LOG.debug("Reading compensation with employee id [{}]", id);
+//
+//        Compensation compensation = compensationRepository.findByEmployeeId(id);
+//
+//        if (compensation == null) {
+//            throw new RuntimeException("Invalid employeeId: " + id);
+//        }
+//
+//        return compensation;
+//    }
+    
+    @Override
+    public Compensation readByEmployeeId(String id) {
+        LOG.debug("Reading compensation with employee id [{}]", id);
+
+        Compensation compensation = null;
+        try {
+            LOG.debug("readByEmployeeId id["+id+"]");
+            compensation = new Compensation();
+            Employee emp = employeeService.read(id);
+            LOG.debug("readByEmployeeId id["+id+"] emp.id["+emp.getEmployeeId()+"]");
+            compensation.setEmployee(emp);
+
+        } catch(Exception e) {
+            LOG.error(e.getMessage());
+        }
         return compensation;
     }
 
